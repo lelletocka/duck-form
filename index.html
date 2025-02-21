@@ -5,6 +5,7 @@
     <meta charset="UTF-8"> 
     <meta name="veiwport" content="width=device-width, initial-scale=1.0">
     <title>duck-form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -14,11 +15,25 @@
 
     <main class="main"> 
         <div class="form-div">
-            <div class="red-div">
-
-            </div>
-            <div class="orange-div">
-            </div>
+            <form class="form" action="">
+                <fieldset>
+                    <label for="full-name">FULL NAME</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Your Name" required class="text-input">
+                    <label for="email">EMAIL</label>
+                        <input type="text" id="email" name="email" placeholder="Your Email" required class="text-input">
+                    <label for="subject">MESSAGE REGARDING</label>
+                        <select id="subject" name="subject" required class="text-input">
+                            <option id="select" name="subject" value="none" disabled selected>- Select -</option>
+                            <option id="adoption" name="subject" value="adoption">Duck Adoption</option>
+                            <option id="recipes" name="subject" value="recipes">Duck Recipes</option>
+                            <option id="phobia" name="subject" value="phobia">Anatidaephobia</option>
+                        </select>
+                    <label for="message">MESSAGE</label>
+                        <textarea id="message" name="message" rows="1" placeholder="Your Message" required class="text-input" maxlength="350"></textarea>
+                </fieldset>
+                <input type="submit" class="button" value="SEND MESSAGE">
+            </form>
+            <img class="duck" src="images/duck_cropped.png" alt="duck">
         </div>
         
 

@@ -1,6 +1,10 @@
 .body {
     background-color: #9DBEBB;
     color: #FFFFFF;
+    font-family: 'Roboto', serif;
+    font-size: 18px;
+    color: #FEFFFF;
+    letter-spacing: 10%;
 }
 
 .main {
@@ -15,21 +19,62 @@
 .form-div {
     width: 954px;
     height: 594px;
-    box-shadow: 0px 2px 30px #468189;   
+    box-shadow: 0px 3px 30px #468189;   
+    position: relative;
+    background: linear-gradient(to right, #BE0909 0% 64%, #FFB039 64% 100%);    
 }
 
-.red-div {
+.form {
+    width: 50%;
+    max-width: 420px;
+    height: 90%;
+    padding: 20px;
+    margin: 20px;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 75%;
+}
+
+.text-input {
     background-color: #BE0909;
-    display: inline-block;
-    width: 65%;
-    height: 100%;
-    margin: 0;
+    padding: 10px;
+    letter-spacing: 20%;
+    color: #FEFFFF;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #9DBEBB;
+    border-width: 1px;
 }
 
-.orange-div {
-    background-color: #FFB039;
-    display: inline-block;
-    width: 35%;
-    height: 100%;
-    margin-left: -4px;
+option {
+    font-family: 'Roboto', serif;
 }
+
+.button {
+    font-weight: bold;
+    display: block;
+    margin: 20px auto 20px auto;
+    background-color: #468189;
+    color: #FFFFFF;
+    padding: 15px;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 2px 10px #58111A;
+}
+
+.button:hover {
+    transform: scale(1.02);
+}
+
+.duck {
+    position: absolute;
+    bottom: 20px;
+    right: 60px;
+}
+
