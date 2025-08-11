@@ -4,32 +4,45 @@
     font-family: 'Roboto', serif;
     font-size: 18px;
     color: #FEFFFF;
-    letter-spacing: 10%;
+    letter-spacing: 1px;
 }
 
 .main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     position: relative;
 }
 
 .form-div {
-    width: 954px;
-    height: 594px;
+    width: 95%;
+    max-width: 954px;
+    min-height: 594px;
+    margin: 10px;
     box-shadow: 0px 3px 30px #468189;   
     position: relative;
     background: linear-gradient(to right, #BE0909 0% 64%, #FFB039 64% 100%);    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+    
 }
 
 .form {
     width: 50%;
     max-width: 420px;
-    height: 90%;
-    padding: 20px;
-    margin: 20px;
+    height: 530px;
+    margin-top: 30px;
+    background-color: #BE0909;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
 }
 
 fieldset {
@@ -37,13 +50,17 @@ fieldset {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 75%;
+    height: 80%;
+}
+
+.label {
+    padding-top: 10px;
 }
 
 .text-input {
     background-color: #BE0909;
     padding: 10px;
-    letter-spacing: 20%;
+    letter-spacing: 2px;
     color: #FEFFFF;
     border-top: none;
     border-left: none;
@@ -59,8 +76,8 @@ option {
 .button {
     font-weight: bold;
     display: block;
-    margin: 20px auto 20px auto;
-    background-color: #468189;
+    margin: 20px auto 20px auto;    
+    background-color: #3d7279;
     color: #FFFFFF;
     padding: 15px;
     border: none;
@@ -72,9 +89,38 @@ option {
     transform: scale(1.02);
 }
 
+.duck-div {
+        align-self: flex-end;
+        width: 45%;
+        margin-bottom: 20px;
+        
+}
 .duck {
-    position: absolute;
-    bottom: 20px;
-    right: 60px;
+    width: 98%; 
+    height: auto;
 }
 
+@media screen and (max-width: 750px) {
+    .form-div {
+         background: linear-gradient(to right, #BE0909 0% 90%, #FFB039 90% 100%); 
+         flex-wrap: wrap;
+         justify-content: flex-start;
+    }
+
+    .form {
+        width: 80%;
+        padding-left: 15px;
+    }
+
+    .duck-div {
+        width: 75%;
+        padding-left: 15px;
+    }
+
+}
+
+@media screen and (min-width: 751px) {
+    .form-div {
+        height: 594px;
+    }
+}
